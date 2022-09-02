@@ -1,0 +1,874 @@
+:root {
+    --color-gold: #f1A600;
+    --color-black: #1f1d2c;
+    --color-dark: #242635;
+    --color-light-gray: #e5e5e5;
+    --color-white: #ffffff;
+    --size-mobile-title-semibold: 50px;
+    --size-mobile-subtitle-semibold: 32px;
+    --size-mobile-subsection-regular: 18px;
+    --size-mobile-body-regular: 16px;
+    --size-desktop-title-semibold: 80px;
+    --size-desktop-subtitle-semibold: 40px;
+    --size-desktop-body-regular: 18px;
+    --size-icons-section1: 24px;
+    --size-icons-section6: 40px;
+    --size-icons-desktop-section3: 122px 122px;
+    --size-icons-min-desktop-section3: 56px 56px;
+}
+
+
+html {
+    box-sizing: border-box;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0%;
+}
+
+body {
+    font-size: 16px;
+}
+
+.section__dark {
+    background-color: var(--color-black);
+}
+
+.section__light {
+    background-color: var(--color-dark);
+}
+
+/*-- First Mobile --*/
+
+/*-- Seccion Principal--*/
+/*-- LISTO --*/
+.principal__container {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color: var(--color-white);
+}
+
+.principal__figure {
+    position: absolute;
+    right: 0;
+    background-color: var(--color-dark);
+    height: 68.3vh;
+    width: 65%;
+}
+
+.principal__header {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 60px;
+    width: 100%;
+}
+
+.principal__button {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 30px;
+}
+
+.principal__containerNavbar {
+    display: none;
+}
+
+.principal__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.principal__name {
+    font-size: 50px;
+}
+
+.principal__subTitle {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    justify-content: center;
+}
+
+.principal__imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal__imgMobile {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    max-width: 200px;
+}
+
+.principal__imgDesktop {
+    display: none;
+}
+
+.principal__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal__text {
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal__icons {
+    margin-top: 30px;
+    margin-right: 3%;
+}
+
+.principal__icon {
+    margin-left: 15px;
+    width: 30px;
+}
+
+
+
+/*-- Seccion Acerca de mi --*/
+/*-- LISTO --*/
+.aboutMe__container {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-white);
+}
+
+.aboutMe__header {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+
+}
+
+.aboutMe__description {
+    line-height: 25px;
+    margin-bottom: 50px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.aboutMe__text {
+    display: flex;
+    text-align: center;
+}
+
+.aboutMe__subContainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    line-height: 20px;
+}
+
+.aboutMe__subContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    line-height: 20px;
+}
+
+.aboutMe__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience__iconAmazon {
+    width: 56px;
+}
+
+.experience__iconAirbnb {
+    width: 56px;
+}
+
+.experience__iconGoogle {
+    width: 56px;
+}
+
+.aboutMe__company {
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.aboutMe__experience {
+    font-size: 0.8rem;
+    color: var(--color-light-gray);
+}
+
+
+
+/*-- Seccion de Experiencia --*/
+/*-- LISTO --*/
+.experience__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.experience__header {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+.experience__subcontainer {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.experience__description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 80px;
+
+}
+
+.experience__text {
+    line-height: 24px;
+    margin-right: 40px;
+    margin-left: 35px;
+}
+
+.experience__text--Margin1 {
+    margin-right: 53px;
+    margin-left: 35px;
+}
+
+.experience__text--Margin2 {
+    margin-left: 31px;
+    margin-right: 15px;
+}
+
+.experience__subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.experience__ocupation {
+    color: var(--color-light-gray);
+    font-size: 0.9rem;
+
+}
+
+.experience__yearsWorked {
+    color: var(--color-light-gray);
+    font-size: 0.7rem;
+}
+
+.experience__experienceTime {
+    color: var(--color-light-gray);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+
+/*-- Seccion de Habilidades --*/
+/*-- LISTO --*/
+.abilities__section {
+    position: relative;
+    height: 92vh;
+    color: var(--color-white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.abilities__figure {
+    position: absolute;
+    background-color: var(--color-dark);
+}
+
+.abilities__rectangle {
+    position: relative;
+    height: 80vh;
+    min-width: 75vw;
+}
+
+.abilities__figure2 {
+    display: none;
+}
+
+.abilities__container {
+    width: 100%;
+    height: 100%;
+}
+
+.abilities__header {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    position: relative;
+}
+
+.abilities__description {
+    margin: 10px 35px 0px 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.abilities__text {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.abilities__numbers {
+    color: var(--color-gold);
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-right: 40px;
+}
+
+
+
+/*-- Seccion de Portafolio --*/
+/*-- LISTO --*/
+.portfolio__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 155vh;
+}
+
+.portfolio__header {
+    color: var(--color-white);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.portfolio__title {
+    font-size: 33px;
+}
+
+.portfolio__subContainer1 {
+    width: 100%;
+    margin-bottom: 85px;
+}
+
+.portfolio__subContainer2 {
+    width: 100%;
+    margin-bottom: 85px;
+}
+
+.portfolio__subContainer3 {
+    width: 100%;
+}
+
+.portfolio__backgroundGold {
+    background-color: var(--color-gold);
+    width: 100%;
+    height: 240px;
+}
+
+.portfolio__backgroundDark {
+    background-color: var(--color-dark);
+    width: 100%;
+    height: 240px;
+}
+
+.portfolio__img {
+    width: 95%;
+    height: 100%;
+    margin: 20px 0px 0px 7.5px;
+}
+
+
+
+/*-- Seccion de Contacto --*/
+/*-- LISTO --*/
+.contact__container {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-white);
+}
+
+.contact__header {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+}
+
+.contact__title {
+    font-size: 33px;
+}
+
+.contact__subContainer1 {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__subContainer2 {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    line-height: 25px;
+}
+
+.contact__description {
+    color: var(--color-light-gray);
+}
+
+
+
+/*-- Pie de Main --*/
+/*-- LISTO --*/
+.footer__sections {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-dark);
+}
+
+.footer__academloLink {
+    text-decoration: none;
+    color: var(--color-light-gray);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*-- Desktop --*/
+@media (min-width: 900px) {
+
+    /*-- Seccion Principal --*/
+    /*-- LISTO --*/
+    .principal__section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .principal__container {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-rows: 100px 150px 1fr;
+        grid-template-columns: 45% 10% 45%;
+    }
+
+    .principal__imgs {
+        grid-row: 2 / 4;
+        grid-column: 3 / 4;
+    }
+
+    .principal__footer {
+        grid-row: 3 / 4;
+        grid-template-columns: 1 / 2;
+        height: 50%;
+        margin-top: 70px;
+    }
+
+    .principal__text {
+        font-size: 1.9vw;
+        display: block;
+        align-self: flex-start;
+        margin-right: 20vw;
+        margin-left: 9vw;
+        margin-bottom: 0.5vw;
+    }
+
+
+    .principal__title {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        position: relative;
+        top: 2vw;
+        align-content: center;
+    }
+
+    .principal__name {
+        font-size: 5.7vw;
+    }
+
+    .principal__subTitle {
+        font-size: 2.2vw;
+        margin-left: 8vw;
+        margin-right: 0%;
+        font-weight: 100;
+        text-align: start;
+        margin-bottom: 3vw;
+    }
+
+    .principal__containerButton {
+        display: none;
+    }
+
+    .principal__header {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        height: 100px;
+    }
+
+    .principal__containerNavbar {
+        display: block;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        min-height: 10vh;
+        padding-right: 100px;
+    }
+
+    .principal__listNavbar span {
+        font-size: 1.45vw;
+        margin-left: 4vw;
+    }
+
+    .principal__imgMobile {
+        display: none;
+    }
+
+    .principal__imgDesktop {
+        width: 95%;
+        display: inline-block;
+        margin-right: 150px;
+        margin-bottom: 100px;
+    }
+
+
+    .principal__icons {
+        align-self: flex-start;
+        margin-left: 5vw;
+    }
+
+    .principal__icon {
+        width: 3.5vw;
+        margin-left: 3vw;
+    }
+
+    .principal__figure {
+        height: 55vw;
+        width: 36vw;
+        margin-bottom: 3vw;
+    }
+
+
+    /*Seccion Acerca de mi --*/
+    /*-- LISTO --*/
+    .aboutMe__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 200px 70px;
+    }
+
+    .aboutMe__header {
+        grid-column: 1 / 7;
+        grid-row: 1;
+    }
+
+    .aboutMe__description {
+        grid-column: 2 / 6;
+        grid-row: 2 / 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutMe__footer {
+        display: flex;
+        grid-row: 3 / 4;
+        grid-column: 2 / 6;
+        width: 70vw;
+        max-width: 2000px;
+    }
+
+    .aboutMe__subContainer2 {
+        position: relative;
+        bottom: 55px;
+    }
+
+    .aboutMe__img {
+        width: 100%;
+    }
+
+    .aboutMe__companyName {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .aboutMe__companyName--MarginAcademlo {
+        margin-top: 7px;
+    }
+
+
+    /*-- Seccion Experiencia --*/
+    /*-- LISTO --*/
+    .experience__subcontainer {
+        width: 80vw;
+    }
+
+    .experience__description {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 100px;
+    }
+
+    .experience__iconContainer {
+        grid-column: 1 / 3;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .experience__iconAmazon {
+        width: 100%;
+        max-width: 100px;
+        position: absolute;
+        right: 45px;
+    }
+
+    .experience__iconAirbnb {
+        width: 100%;
+        max-width: 100px;
+        position: absolute;
+        right: 40px;
+    }
+
+    .experience__iconGoogle {
+        width: 100%;
+        max-width: 100px;
+        position: absolute;
+        right: 40px;
+    }
+
+    .experience__text {
+        grid-column: 3 / 5;
+        width: 100%;
+        height: 100%;
+        line-height: 30px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .experience__subtitle {
+        font-size: 25px;
+    }
+
+    .experience__ocupation {
+        font-size: 19px;
+    }
+
+    .experience__yearsWorked {
+        font-size: 15px;
+    }
+
+    .experience__footer {
+        grid-column: 5 / 7;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .experience__experienceTime {
+        font-size: 25px;
+        position: absolute;
+        top: 35px;
+        left: 30px;
+    }
+
+
+    /*-- Seccion Habilidades --*/
+    /*-- LISTO --*/
+    /*-- Mejorar Responsividad --*/
+    .abilities__section {
+        width: 100%;
+        height: 71vh;
+    }
+
+    .abilities__description {
+        width: 100vw;
+        height: 46vh;
+    }
+
+    .abilities__text--delete {
+        display: none;
+    }
+
+    .abilities__numbers {
+        font-size: 3.5rem;
+        margin-right: 60px;
+    }
+
+    .abilities__text {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .abilities__figure {
+        display: none;
+    }
+
+    .abilities__figure2 {
+        display: block;
+        position: absolute;
+        height: 71vh;
+    }
+
+
+    /*-- Seccion Portafolio --*/
+    /*-- LISTO --*/
+    .portfolio__container {
+        height: 100%;
+    }
+
+    .portfolio__header {
+        height: 100px;
+    }
+
+    .portfolio__imgs {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 2fr 2fr 30px 2fr 2fr;
+        grid-template-rows: 1fr 30px 1fr;
+        max-width: 950px;
+    }
+
+    .portfolio__subContainer1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .portfolio__subContainer2 {
+        grid-column: 4 / 6;
+        grid-row: 1 / 2;
+    }
+
+    .portfolio__subContainer3 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .portfolio__backgroundGold {
+        height: 350px;
+        width: 100%;
+    }
+
+    .portfolio__backgroundDark {
+        height: 350px;
+        width: 100%;
+    }
+
+
+    /*-- Seccion Contacto --*/
+    /*-- LISTO --*/
+    .contact__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact__container {
+        width: 100%;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        background-color: var(--color-dark);
+        max-width: 1024px;
+    }
+
+    .contact__header {
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+
+    .contact__subContainer1 {
+        grid-column: 1/3;
+        grid-row: 2/4;
+    }
+
+    .contact__subContainer2 {
+        grid-column: 3/5;
+        grid-row: 2/4;
+    }
+
+
+    /*-- Pie de Secciones --*/
+    /*-- LISTO --*/
+    .footer__sections {
+        height: 20vh;
+        background-color: var(--color-black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    @media (max-width: 600px) {
+        .principal__figure {
+            position: absolute;
+            right: 0;
+            background-color: var(--color-dark);
+            height: 68.3vh;
+            width: 65%;
+        }
+    }
+
+}
