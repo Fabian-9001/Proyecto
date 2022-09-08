@@ -15,6 +15,7 @@
     --size-icons-section6: 40px;
     --size-icons-desktop-section3: 122px 122px;
     --size-icons-min-desktop-section3: 56px 56px;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
 html {
@@ -33,6 +34,7 @@ html {
 
 body {
     font-size: 16px;
+    background-color: var(--color-black);
 }
 
 .section__dark {
@@ -50,6 +52,11 @@ body {
 
 /*-- Seccion Principal--*/
 /*-- LISTO --*/
+
+.principal__section {
+    border: 2px solid var(--color-black);
+}
+
 .principal__container {
     width: 100%;
     height: 100%;
@@ -157,8 +164,41 @@ body {
 .principal__icon {
     margin-left: 15px;
     width: 30px;
+    transition: 0.5s;
 }
 
+.principal__icon__twetter:hover {
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px 5px rgb(54, 245, 255);
+    background-color: #e5e5e5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.principal__icon__instagram:hover {
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px 5px rgb(169, 72, 221);
+    background-color: #e5e5e5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.principal__icon__linkedin:hover {
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px 5px rgb(61, 128, 252);
+    background-color: #e5e5e5;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.principal__link {
+    transition: 0.5s;
+}
+
+.principal__link:hover {
+    color: deepskyblue;
+    transition: 0.5s;
+}
 
 
 /*-- Seccion Acerca de mi --*/
@@ -168,6 +208,8 @@ body {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--color-white);
+    padding-bottom: 10px;
+    border: 2px solid var(--color-dark);
 }
 
 .aboutMe__header {
@@ -229,10 +271,17 @@ body {
     color: var(--color-light-gray);
 }
 
-
+.aboutMe__logo:hover {
+    cursor: pointer;
+}
 
 /*-- Seccion de Experiencia --*/
 /*-- LISTO --*/
+.experience__section {
+    padding-bottom: 14px;
+    border: 2px solid var(--color-black);
+}
+
 .experience__container {
     width: 100%;
     height: 100%;
@@ -307,22 +356,51 @@ body {
 
 .experience__iconAmazon {
     width: 56px;
+    transition: 0.5s;
+}
+
+.experience__iconAmazon:hover {
+    border-radius: 30px;
+    box-shadow: 0px 0px 80px 8px rgb(255, 234, 0);
+    background-color: #ffd900;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .experience__iconAirbnb {
     width: 56px;
+    transition: 0.5s;
+}
+
+.experience__iconAirbnb:hover {
+    border-radius: 30px;
+    box-shadow: 0px 0px 80px 8px rgb(255, 96, 96);
+    background-color: #e03d3d;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .experience__iconGoogle {
     width: 56px;
+    transition: 0.5s;
 }
+
+.experience__iconGoogle:hover {
+    border-radius: 30px;
+    box-shadow: 0px 0px 80px 5px rgb(30, 191, 255);
+    background-color: rgb(75, 117, 202);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
 
 /*-- Seccion de Habilidades --*/
 /*-- LISTO --*/
 
 .abilities__section {
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 104px;
+    border: 2px solid var(--color-black);
 }
 
 .abilities__container {
@@ -360,13 +438,24 @@ body {
     align-items: center;
     font-weight: 600;
     margin-bottom: 30px;
+    z-index: 1;
+    transition: 2s;
+}
+
+.abilities__text:hover {
+    color: var(--color-black);
+    font-weight: 600;
+    transition: 1s;
 }
 
 .abilities__numbers {
-    color: var(--color-gold);
+    color: rgb(83, 188, 184);
     font-size: 2.3rem;
     font-weight: 600;
     margin-right: 40px;
+    transition: 2s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
 }
 
 .abilities__subcontainer {
@@ -375,11 +464,47 @@ body {
     position: relative;
 }
 
+.item {
+    position: relative;
+}
+
+.item:hover .abilities__numbers {
+    color: white;
+    transition: 0.2s;
+    background-color: rgb(83, 188, 184);
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item::before {
+    content: "";
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: var(--clippy);
+    transition: clip-path 1s;
+    z-index: -1;
+}
+
+.item:hover::before {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+}
 
 
 
 /*-- Seccion de Portafolio --*/
 /*-- LISTO --*/
+.portfolio__section {
+    border: 2px solid var(--color-black);
+}
+
 .portfolio__container {
     display: flex;
     flex-direction: column;
@@ -419,15 +544,32 @@ body {
 }
 
 .portfolio__backgroundGold {
-    background-color: var(--color-gold);
+    background-color: rgb(78, 65, 111);
     width: 100%;
     height: 240px;
+    transition: 0.5s;
 }
 
 .portfolio__backgroundDark {
-    background-color: var(--color-dark);
+    background-color: rgb(56, 94, 128);
     width: 100%;
     height: 240px;
+    transition: 0.5s;
+}
+
+.portfolio__backgroundGold:hover {
+    height: 250px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px 3px rgb(217, 184, 251);
+    border: 2px solid rgb(203, 201, 201);
+}
+
+.portfolio__backgroundDark:hover {
+
+    height: 250px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 20px 3px rgb(9, 165, 244);
+    border: 2px solid rgb(203, 201, 201);
 }
 
 .portfolio__img {
@@ -436,10 +578,18 @@ body {
     margin: 20px 0px 0px 7.5px;
 }
 
+.portfolio__img:hover {
+    cursor: pointer;
+}
 
 
 /*-- Seccion de Contacto --*/
 /*-- LISTO --*/
+.contact__section {
+    border: 2px solid var(--color-dark);
+    padding-bottom: 1px;
+}
+
 .contact__container {
     width: 100%;
     height: 100%;
@@ -487,6 +637,21 @@ body {
     color: var(--color-light-gray);
 }
 
+.contact__icon {
+    width: 100px;
+    transition: 0.5s;
+
+}
+
+.contact__icon:hover {
+    background-color: #000000;
+    transition: 0.4s;
+    box-shadow: 0px 0px 20px 3px rgb(224, 99, 21);
+    border: 2px solid rgb(230, 102, 55);
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
 
 
 /*-- Pie de Main --*/
@@ -497,14 +662,21 @@ body {
     justify-content: center;
     align-items: flex-start;
     background-color: var(--color-dark);
+    border: 2px solid var(--color-dark);
 }
 
 .footer__academloLink {
     text-decoration: none;
     color: var(--color-light-gray);
     font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
 }
 
+.footer__academloLink:hover {
+    font-size: 1.2rem;
+    transition: 0.5s;
+    color: rgb(111, 86, 174);
+}
 
 
 /*-- Desktop --*/
@@ -512,6 +684,10 @@ body {
 
     /*-- Seccion Principal --*/
     /*-- LISTO --*/
+    .principal__section {
+        border: 2px solid var(--color-black);
+    }
+
     .principal__container {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -623,11 +799,21 @@ body {
         margin-left: 37px;
     }
 
+    .principal__link {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+
 
 
 
     /*Seccion Acerca de mi --*/
     /*-- LISTO --*/
+    .aboutMe__section {
+        border: 2px solid var(--color-dark);
+    }
+
     .aboutMe__container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -682,6 +868,11 @@ body {
 
     /*-- Seccion Experiencia --*/
     /*-- LISTO --*/
+    .experience__section {
+        padding-bottom: 50px;
+        border: 2px solid var(--color-black);
+    }
+
     .experience__subcontainer {
         width: 75%;
     }
@@ -773,7 +964,9 @@ body {
     .abilities__section {
         width: 100%;
         height: 100%;
-        padding-bottom: 1px;
+        padding-bottom: 70px;
+        border: 2px solid var(--color-black);
+
     }
 
     .abilities__container {
@@ -832,11 +1025,20 @@ body {
         height: 90px;
     }
 
+    .abilities__text:hover {
+        font-weight: 500;
+    }
 
-
+    .item::before {
+        width: 120%;
+    }
 
     /*-- Seccion Portafolio --*/
     /*-- LISTO --*/
+    .portfolio__section {
+        border: 2px soid var(--color-black);
+    }
+
     .portfolio__container {
         height: 100%;
         max-width: 1024px;
@@ -874,13 +1076,38 @@ body {
     .portfolio__backgroundGold {
         height: 350px;
         width: 100%;
+        background-color: rgb(78, 65, 111);
+        transition: 0.5s;
+    }
+
+    .portfolio__backgroundGold:hover {
+        height: 360px;
+        width: 400px;
+        box-shadow: 0px 0px 30px 5px rgb(217, 184, 251);
+        transition: 0.5s;
+        border: 2px solid rgb(203, 201, 201);
     }
 
     .portfolio__backgroundDark {
         height: 350px;
         width: 100%;
+        background-color: rgb(56, 94, 128);
+        transition: 0.5s;
     }
 
+    .portfolio__backgroundDark:hover {
+        height: 360px;
+        width: 400px;
+        box-shadow: 0px 0px 30px 5px rgb(9, 165, 244);
+        transition: 0.5s;
+        border: 2px solid rgb(203, 201, 201);
+    }
+
+    .portfolio__img {
+        width: 95%;
+        height: 100%;
+        margin: 20px 0px 0px 7.5px;
+    }
 
 
 
@@ -890,6 +1117,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 2px solid var(--color-black);
     }
 
     .contact__container {
@@ -916,19 +1144,37 @@ body {
     .contact__subContainer2 {
         grid-column: 3/5;
         grid-row: 2/4;
+        padding: 0;
     }
 
+    .contact__icon {
+        width: 100px;
+        transition: 0.5s;
+    }
 
-
+    .contact__icon:hover {
+        width: 110px;
+        transition: 0.5s;
+    }
 
     /*-- Pie de Secciones --*/
     /*-- LISTO --*/
     .footer__sections {
-        height: 20vh;
+        height: 150px;
         background-color: var(--color-black);
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 2px solid var(--color-black);
     }
 
+    .footer__academloLink {
+        transition: 0.5s;
+    }
+
+    .footer__academloLink:hover {
+        font-size: 1.2rem;
+        transition: 0.5s;
+        color: darkslateblue;
+    }
 }
