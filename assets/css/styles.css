@@ -17,10 +17,8 @@
     --size-icons-min-desktop-section3: 56px 56px;
 }
 
-
 html {
     box-sizing: border-box;
-
 }
 
 *,
@@ -45,24 +43,39 @@ body {
     background-color: var(--color-dark);
 }
 
+
+
+
 /*-- First Mobile --*/
 
 /*-- Seccion Principal--*/
 /*-- LISTO --*/
 .principal__container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 90px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
     color: var(--color-white);
+    position: relative;
+    max-width: 375px;
+    margin: 0 auto;
 }
 
 .principal__figure {
     position: absolute;
     right: 0;
-    background-color: var(--color-dark);
-    height: 68.3vh;
+    background-color: #252837;
+    height: 70%;
     width: 65%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal__rectangle {
+    height: 100%;
+    width: 100%;
 }
 
 .principal__header {
@@ -70,6 +83,7 @@ body {
     flex-direction: row-reverse;
     height: 60px;
     width: 100%;
+    position: relative;
 }
 
 .principal__button {
@@ -88,6 +102,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    position: relative;
 }
 
 .principal__name {
@@ -107,6 +122,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .principal__imgMobile {
@@ -165,14 +181,16 @@ body {
 
 .aboutMe__description {
     line-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
-    margin-right: 15px;
-    margin-left: 15px;
 }
 
 .aboutMe__text {
     display: flex;
     text-align: center;
+    max-width: 500px;
 }
 
 .aboutMe__subContainer1 {
@@ -180,7 +198,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 25vh;
+    height: 100%;
+    padding-bottom: 50px;
     line-height: 20px;
 }
 
@@ -189,7 +208,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 30vh;
+    height: 100%;
+    padding-bottom: 70px;
     line-height: 20px;
 }
 
@@ -197,18 +217,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.experience__iconAmazon {
-    width: 56px;
-}
-
-.experience__iconAirbnb {
-    width: 56px;
-}
-
-.experience__iconGoogle {
-    width: 56px;
 }
 
 .aboutMe__company {
@@ -231,7 +239,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     color: var(--color-white);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -298,35 +305,44 @@ body {
     font-size: 1.2rem;
 }
 
+.experience__iconAmazon {
+    width: 56px;
+}
 
+.experience__iconAirbnb {
+    width: 56px;
+}
+
+.experience__iconGoogle {
+    width: 56px;
+}
 
 /*-- Seccion de Habilidades --*/
 /*-- LISTO --*/
+
 .abilities__section {
     position: relative;
-    height: 92vh;
-    color: var(--color-white);
-    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 100px;
 }
 
-.abilities__figure {
-    position: absolute;
-    background-color: var(--color-dark);
+.abilities__container {
+    color: var(--color-white);
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 375px;
+    margin: 0 auto;
+
 }
 
 .abilities__rectangle {
-    position: relative;
-    height: 80vh;
-    min-width: 75vw;
+    height: 90%;
+    width: 98%;
+    background-color: #252837;
+    max-width: 288.9px;
+    position: absolute;
 }
 
 .abilities__figure2 {
     display: none;
-}
-
-.abilities__container {
-    width: 100%;
-    height: 100%;
 }
 
 .abilities__header {
@@ -336,15 +352,7 @@ body {
     align-items: center;
     height: 120px;
     position: relative;
-}
-
-.abilities__description {
-    margin: 10px 35px 0px 35px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding-top: 0px;
 }
 
 .abilities__text {
@@ -361,6 +369,13 @@ body {
     margin-right: 40px;
 }
 
+.abilities__subcontainer {
+    margin: 0 auto;
+    max-width: 310px;
+    position: relative;
+}
+
+
 
 
 /*-- Seccion de Portafolio --*/
@@ -370,7 +385,9 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 155vh;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 20px;
 }
 
 .portfolio__header {
@@ -442,7 +459,7 @@ body {
 }
 
 .contact__subContainer1 {
-    height: 40vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -450,11 +467,12 @@ body {
 }
 
 .contact__subContainer2 {
-    height: 40vh;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .contact__footer {
@@ -474,7 +492,7 @@ body {
 /*-- Pie de Main --*/
 /*-- LISTO --*/
 .footer__sections {
-    height: 10vh;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -494,63 +512,71 @@ body {
 
     /*-- Seccion Principal --*/
     /*-- LISTO --*/
-    .principal__section {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .principal__container {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         display: grid;
-        grid-template-rows: 100px 150px 1fr;
-        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: 0.1fr 0.5fr 1fr;
+        grid-template-columns: 4fr 1fr 4fr;
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
+        padding-bottom: 0px;
+    }
+
+    .principal__figure {
+        display: block;
+        position: absolute;
+        height: 93%;
+        width: 36.5%;
+    }
+
+    .principal__rectangle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 
     .principal__imgs {
         grid-row: 2 / 4;
         grid-column: 3 / 4;
+        position: relative;
     }
 
     .principal__footer {
         grid-row: 3 / 4;
         grid-template-columns: 1 / 2;
         height: 50%;
-        margin-top: 70px;
+        margin-top: 30px;
     }
 
     .principal__text {
-        font-size: 1.9vw;
-        display: block;
-        align-self: flex-start;
-        margin-right: 20vw;
-        margin-left: 9vw;
-        margin-bottom: 0.5vw;
+        font-size: 25px;
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 180px;
+        margin-left: 40px;
     }
-
 
     .principal__title {
         grid-column: 1 / 2;
         grid-row: 2 / 3;
-        position: relative;
-        top: 2vw;
-        align-content: center;
+        height: 200px;
+        width: 410px;
+        margin-left: 10px;
     }
 
     .principal__name {
-        font-size: 5.7vw;
+        font-size: 70px;
     }
 
     .principal__subTitle {
-        font-size: 2.2vw;
-        margin-left: 8vw;
-        margin-right: 0%;
-        font-weight: 100;
+        font-size: 28px;
         text-align: start;
-        margin-bottom: 3vw;
+        margin-left: 20px;
+        margin-right: 0px;
     }
 
     .principal__containerButton {
@@ -564,18 +590,17 @@ body {
     }
 
     .principal__containerNavbar {
-        display: block;
         display: flex;
         justify-content: end;
         align-items: center;
         width: 100%;
-        min-height: 10vh;
-        padding-right: 100px;
+        padding-right: 75px;
+        position: relative;
     }
 
     .principal__listNavbar span {
-        font-size: 1.45vw;
-        margin-left: 4vw;
+        font-size: 17px;
+        margin-left: 30px;
     }
 
     .principal__imgMobile {
@@ -583,28 +608,22 @@ body {
     }
 
     .principal__imgDesktop {
-        width: 95%;
+        width: 100%;
         display: inline-block;
         margin-right: 150px;
         margin-bottom: 100px;
     }
 
-
     .principal__icons {
         align-self: flex-start;
-        margin-left: 5vw;
     }
 
     .principal__icon {
-        width: 3.5vw;
-        margin-left: 3vw;
+        width: 40px;
+        margin-left: 37px;
     }
 
-    .principal__figure {
-        height: 55vw;
-        width: 36vw;
-        margin-bottom: 3vw;
-    }
+
 
 
     /*Seccion Acerca de mi --*/
@@ -613,6 +632,9 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 100px 100px 200px 70px;
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .aboutMe__header {
@@ -633,7 +655,7 @@ body {
         grid-row: 3 / 4;
         grid-column: 2 / 6;
         width: 70vw;
-        max-width: 2000px;
+        max-width: 900px;
     }
 
     .aboutMe__subContainer2 {
@@ -656,15 +678,25 @@ body {
     }
 
 
+
+
     /*-- Seccion Experiencia --*/
     /*-- LISTO --*/
     .experience__subcontainer {
-        width: 80vw;
+        width: 75%;
+    }
+
+    .experience__container {
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
     }
 
     .experience__description {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1.5fr 1fr 1fr;
         height: 100px;
     }
 
@@ -734,17 +766,34 @@ body {
     }
 
 
+
+
     /*-- Seccion Habilidades --*/
     /*-- LISTO --*/
-    /*-- Mejorar Responsividad --*/
     .abilities__section {
         width: 100%;
-        height: 71vh;
+        height: 100%;
+        padding-bottom: 1px;
+    }
+
+    .abilities__container {
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100%;
+        position: relative;
     }
 
     .abilities__description {
         width: 100vw;
-        height: 46vh;
+        height: 100%;
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .abilities__subcontainer {
+        max-width: 620px;
     }
 
     .abilities__text--delete {
@@ -759,6 +808,7 @@ body {
     .abilities__text {
         font-size: 1.5rem;
         font-weight: 400;
+
     }
 
     .abilities__figure {
@@ -768,14 +818,30 @@ body {
     .abilities__figure2 {
         display: block;
         position: absolute;
-        height: 71vh;
+        width: 100%;
+        height: 100%;
     }
+
+    .abilities__figure21 {
+        width: 48.7%;
+        height: 100%;
+        background-color: #252837;
+    }
+
+    .abilities__header {
+        height: 90px;
+    }
+
+
 
 
     /*-- Seccion Portafolio --*/
     /*-- LISTO --*/
     .portfolio__container {
         height: 100%;
+        max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .portfolio__header {
@@ -816,6 +882,8 @@ body {
     }
 
 
+
+
     /*-- Seccion Contacto --*/
     /*-- LISTO --*/
     .contact__section {
@@ -826,12 +894,13 @@ body {
 
     .contact__container {
         width: 100%;
-        height: 60vh;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         background-color: var(--color-dark);
         max-width: 1024px;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .contact__header {
@@ -850,6 +919,8 @@ body {
     }
 
 
+
+
     /*-- Pie de Secciones --*/
     /*-- LISTO --*/
     .footer__sections {
@@ -858,17 +929,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-
-    @media (max-width: 600px) {
-        .principal__figure {
-            position: absolute;
-            right: 0;
-            background-color: var(--color-dark);
-            height: 68.3vh;
-            width: 65%;
-        }
     }
 
 }
